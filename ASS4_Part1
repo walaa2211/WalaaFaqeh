@@ -1,0 +1,70 @@
+package Connection ;
+
+public class factory
+{
+	public static ProObject main (String []args)
+	ProObject getConnection(String protocol)
+	{
+		if(protocol==null)
+		{
+			return null;
+		}
+		else if (protocol.equalsIgnoreCase("httpP"))
+		{
+			return httpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("ftpP"))
+		{
+			return ftpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("telnetP"))
+		{
+			return telnetP.getInstance();
+			
+		}
+		else if (protocol.equalsIgnoreCase("scpP"))
+		{
+			return scpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("sshP"))
+		{
+			return sshP.getInstance();
+		}
+		/*
+		 * switch (protocol)
+		 * {
+		 * case httpP:
+		 * httpP.getInstance();
+		 * break;
+		 * 
+		 * case ftpP:
+		 * ftpP.getInstance();
+		 * break;
+		 * 
+		 * case scpP:
+		 * scpP.getInstance();
+		 * break;
+		 * 
+		 * case telnetP:
+		 * telnetP.getInstance();
+		 * break;
+		 * 
+		 * case sshP:
+		 * sshP.getInstance();
+		 * break;
+		 * 
+		 * default:
+		 * System.out.println("Please Try Again");
+		 * 
+		 * }
+		 */
+
+	}
+
+	
+
+public void getCurrentConnections()
+{
+	System.out.println();
+}
+}
