@@ -1,6 +1,6 @@
 package Connection ;
  //1)
-public class factory
+public class Ffactory
 {
 	ProObject getConnection(String protocol)
 	{
@@ -58,10 +58,14 @@ public class factory
 		 * }
 		 */
 
-	}
+	}}
 
 	
 //2)
+package Connection ;
+
+public class Ffactory
+{
 ProObject getConnection(String protocol)
 	{
 		if(protocol==null)
@@ -104,10 +108,6 @@ ProObject getConnection(String protocol)
 		else 
 			return sshP.getInstance();
 		}
-
-public void getCurrentConnections()
-{
-	System.out.println();
-}
-}
+		}
+		
 
