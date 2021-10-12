@@ -1,8 +1,7 @@
 package Connection ;
-
+ //1)
 public class factory
 {
-	public static ProObject main (String []args)
 	ProObject getConnection(String protocol)
 	{
 		if(protocol==null)
@@ -62,9 +61,53 @@ public class factory
 	}
 
 	
+//2)
+ProObject getConnection(String protocol)
+	{
+		if(protocol==null)
+		{
+			return null;
+		}
+		else if (protocol.equalsIgnoreCase("httpP"))
+		{
+		if(counter>=3)
+		println("Can't create more than 3 connection!!")
+		else 
+			return httpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("ftpP"))
+		{
+		if(counter>=3)
+		println("Can't create more than 3 connection!!")
+		else 
+			return ftpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("telnetP"))
+		{
+		if(counter>=3)
+		println("Can't create more than 3 connection!!")
+		else 
+			return telnetP.getInstance();
+			
+		}
+		else if (protocol.equalsIgnoreCase("scpP"))
+		{
+		if(counter>=3)
+		println("Can't create more than 3 connection!!")
+		else 
+			return scpP.getInstance();
+		}
+		else if (protocol.equalsIgnoreCase("sshP"))
+		{
+		if(counter>=3)
+		println("Can't create more than 3 connection!!")
+		else 
+			return sshP.getInstance();
+		}
 
 public void getCurrentConnections()
 {
 	System.out.println();
 }
 }
+
